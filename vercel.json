@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "routes": [
+  "redirects": [
     {
-      "src": "/.*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "header",
@@ -10,8 +10,11 @@
           "value": "TZ"
         }
       ],
-      "dest": "https://kutombana.vercel.app/"
-    },
+      "destination": "https://kutombana.vercel.app/$1",
+      "permanent": false
+    }
+  ],
+  "routes": [
     {
       "src": "/.*",
       "dest": "/index.html"
