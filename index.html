@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Solutions - Secure Data & Compliance</title>
+    <!-- Using Tailwind for rapid, modern UI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Using Inter font for that clean, professional "SaaS" look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Gradient text for the hero */
+        .hero-gradient-text {
+            background: linear-gradient(to right, #3b82f6, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Subtle animation for feature cards */
+        .feature-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.07), 0 8px 10px -6px rgba(0, 0, 0, 0.07);
+        }
+        /* Simple fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0; /* Start hidden */
+        }
+        /* Stagger animations */
+        .fade-in-delay-1 { animation-delay: 0.1s; }
+        .fade-in-delay-2 { animation-delay: 0.2s; }
+        .fade-in-delay-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-lg bg-opacity-80">
+        <nav class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.602-.36-3.113-.998-4.524H18c-.452 0-.89-.071-1.313-.203L15.75 5.25m-3-3.036l-3.375 3.375m3.375-3.375L18.75 5.25m-6.75 0l-3.375-3.375m3.375 3.375l3.375 3.375" />
+                </svg>
+                <span class="text-2xl font-bold text-gray-900">Nexus<span class="text-blue-600">Secure</span></span>
+            </div>
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Features</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Testimonials</a>
+                <a href="#privacy" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Privacy</a>
+                <a href="#contact" class="bg-blue-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md">Request Demo</a>
+            </div>
+            <!-- Mobile Menu Button (cosmetic) -->
+            <div class="md:hidden">
+                <svg class="h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="relative py-20 sm:py-32 overflow-hidden">
+            <div class="absolute inset-0 bg-gray-50 -z-10"></div>
+            <!-- Background Gradient Blur -->
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+            <div class="absolute top-0 right-1/4 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse animation-delay-3000"></div>
+
+            <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tighter leading-tight fade-in">
+                    Enterprise-Grade Security,
+                    <span class="block hero-gradient-text">Simplified for Everyone.</span>
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto fade-in fade-in-delay-1">
+                    NexusSecure provides cutting-edge compliance and data protection solutions. We help businesses navigate complex regulations, build user trust, and secure their digital assets with our automated platform.
+                </p>
+                <div class="mt-10 flex justify-center items-center gap-4 fade-in fade-in-delay-2">
+                    <a href="#contact" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-blue-500/30">
+                        Get Started
+                    </a>
+                    <a href="#features" class="text-gray-700 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+                        Learn More &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 sm:py-28 bg-white">
+            <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-base font-semibold text-blue-600 tracking-wide uppercase">Why Choose Us</h2>
+                    <p class="mt-2 text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tighter">
+                        Compliance Without Complexity
+                    </p>
+                </div>
+                
+                <div class="mt-16 grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="feature-card bg-gray-50 rounded-xl p-8 border border-gray-100 fade-in">
+                        <div class="bg-blue-100 text-blue-600 h-12 w-12 rounded-full flex items-center justify-center">
+                            <!-- Icon: Shield Check -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.745 3.745 0 013.296-1.043A3.745 3.745 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.745 3.745 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-5 text-xl font-bold text-gray-900">Automated Compliance</h3>
+                        <p class="mt-2 text-base text-gray-600">Our platform continuously monitors for regulatory changes (GDPR, CCPA) and updates your policies automatically.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card bg-gray-50 rounded-xl p-8 border border-gray-100 fade-in fade-in-delay-1">
+                        <div class="bg-blue-100 text-blue-600 h-12 w-12 rounded-full flex items-center justify-center">
+                            <!-- Icon: Document Text -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-5 text-xl font-bold text-gray-900">Privacy-First Policies</h3>
+                        <p class="mt-2 text-base text-gray-600">Generate human-readable privacy policies that build trust with your users, not confuse them with legal jargon.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card bg-gray-50 rounded-xl p-8 border border-gray-100 fade-in fade-in-delay-2">
+                        <div class="bg-blue-100 text-blue-600 h-12 w-12 rounded-full flex items-center justify-center">
+                            <!-- Icon: Users -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM8.25 18.75a2.25 2.25 0 012.25-2.25h1.5a2.25 2.25 0 012.25 2.25m-7.5 0h7.5m-7.5 0l-.008 0M10.5 16.5l.008 0m.375 0l.008 0m.375 0l.008 0m.375 0l.008 0M13.5 16.5l.008 0" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-5 text-xl font-bold text-gray-900">User Data Consent</h3>
+                        <p class="mt-2 text-base text-gray-600">An easy-to-integrate consent management platform that respects user choice and ensures you stay compliant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 sm:py-28 bg-gray-50 overflow-hidden">
+            <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tighter">
+                        Trusted by Modern Teams
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Don't just take our word for it. See what our partners are saying about our platform.
+                    </p>
+                </div>
+
+                <!-- Fake Testimonial Card -->
+                <div class="mt-16 max-w-3xl mx-auto relative fade-in fade-in-delay-1">
+                    <div class="relative bg-white rounded-xl shadow-lg p-8">
+                        <svg class="absolute top-8 left-8 h-12 w-12 text-gray-100" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.33,20.4H5.21C4.38,20.4,4,20.08,4,19.36V13.2c0-0.72,0.38-1.04,1.21-1.04h4.12c0.83,0,1.21,0.32,1.21,1.04v6.16 C10.54,20.08,10.16,20.4,9.33,20.4z M25.33,20.4h-4.12c-0.83,0-1.21-0.32-1.21-1.04v-6.16c0-0.72,0.38-1.04,1.21-1.04h4.12 c0.83,0,1.21,0.32,1.21,1.04v6.16C26.54,20.08,26.16,20.4,25.33,20.4z"></path>
+                        </svg>
+                        <blockquote class="relative z-10">
+                            <p class="text-xl font-medium text-gray-700">
+                                "NexusSecure was a game-changer for our compliance strategy. We were able to automate 90% of our policy workflow, freeing up our legal team to focus on bigger-picture items. The integration was seamless."
+                            </p>
+                        </blockquote>
+                        <footer class="mt-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <!-- Using a placeholder image -->
+                                    <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/e0e7ff/3b82f6?text=JS" alt="Jane Smith">
+                                </div>
+                                <div class="ml-4">
+                                    <div class="text-base font-bold text-gray-900">Jane Smith</div>
+                                    <div class="text-sm font-medium text-gray-600">Head of Compliance, FutureTech Inc.</div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Section -->
+        <section id="privacy" class="py-20 sm:py-28 bg-white">
+            <div class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-8 text-center tracking-tighter">Privacy & Policy</h2>
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-8 prose prose-lg max-w-none text-gray-700">
+                    <p><strong>Last Updated:</strong> November 9, 2025</p>
+                    <p>NexusSecure ("us", "we", or "our") operates the NexusSecure website (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.</p>
+                    
+                    <h3>Information Collection and Use</h3>
+                    <p>We collect several different types of information for various purposes to provide and improve our Service to you. This may include, but is not limited to, Personal Data (e.g., email address, name) and Usage Data (e.g., IP address, browser type).</p>
+
+                    <h3>Use of Data</h3>
+                    <p>NexusSecure uses the collected data for various purposes:</p>
+                    <ul>
+                        <li>To provide and maintain the Service</li>
+                        <li>To notify you about changes to our Service</li>
+                        <li>To provide customer care and support</li>
+                        <li>To monitor the usage of the Service</li>
+                        <li>To detect, prevent and address technical issues</li>
+                    </ul>
+
+                    <h3>Cookies Policy</h3>
+                    <p>We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / CTA Section -->
+        <section id="contact" class="bg-gray-900">
+            <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center">
+                <h2 class="text-4xl font-extrabold text-white tracking-tighter">
+                    Ready to Secure Your Business?
+                </h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+                    Get in touch with our team today to schedule a free, no-obligation demo of the NexusSecure platform.
+                </p>
+                <a href="#" class="mt-8 inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
+                    Request a Demo
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer with Facebook Disclaimer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Logo & Disclaimer -->
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.602-.36-3.113-.998-4.524H18c-.452 0-.89-.071-1.313-.203L15.75 5.25m-3-3.036l-3.375 3.375m3.375-3.375L18.75 5.25m-6.75 0l-3.375-3.375m3.375 3.375l3.375 3.375" />
+                        </svg>
+                        <span class="text-xl font-bold text-gray-900">NexusSecure</span>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500">
+                        &copy; 2025 Nexus Solutions. All rights reserved.
+                    </p>
+                </div>
+                <!-- Fake Links: Product -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Product</h3>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Platform</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Pricing</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Integrations</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Changelog</a></li>
+                    </ul>
+                </div>
+                <!-- Fake Links: Company -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Company</h3>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">About</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Blog</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Careers</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Fake Links: Legal -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Legal</h3>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#privacy" class="text-base text-gray-500 hover:text-gray-900">Privacy Policy</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Terms of Service</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Acceptable Use</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- The Critical Facebook Disclaimer -->
+            <div class="mt-12 border-t border-gray-200 pt-8">
+                <p class="text-xs text-gray-500 xl:text-center">
+                    <strong>Disclaimer:</strong> This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS for animations (to make them trigger on scroll) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            // Re-query for elements and apply animation class
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // We change the style to apply animation
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .fade-in.visible {
+                    animation: fadeIn 0.6s ease-out forwards;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
