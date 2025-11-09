@@ -10,7 +10,7 @@
           "value": "TZ"
         }
       ],
-      "dest": "https://YOUR-MONEY-SITE-URL-HERE.com"
+      "dest": "https://kutombana.vercel.app/"
     },
     {
       "src": "/.*",
