@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/.*",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "TZ"
+        }
+      ],
+      "destination": "https://YOUR-MONEY-SITE-URL-HERE.com",
+      "permanent": false
+    }
+  ]
+}
