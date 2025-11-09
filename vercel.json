@@ -10,8 +10,12 @@
           "value": "TZ"
         }
       ],
-      "destination": "https://YOUR-MONEY-SITE-URL-HERE.com",
+      "dest": "https://YOUR-MONEY-SITE-URL-HERE.com",
       "permanent": false
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
     }
   ]
 }
