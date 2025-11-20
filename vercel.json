@@ -10,7 +10,7 @@
           "value": "TZ"
         }
       ],
-      "dest": "https://kutombana.vercel.app/$1",
+      "dest": "https://penzi-shata.vercel.app/$1",
       "status": 307
     },
     {
