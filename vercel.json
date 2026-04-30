@@ -10,7 +10,7 @@
           "value": "TZ"
         }
       ],
-      "dest": "https://wakora.site/$1",
+      "dest": "https://facebookgroup.vercel.app/$1",
       "status": 307
     },
     {
