@@ -8,6 +8,11 @@
           "type": "header",
           "key": "x-vercel-ip-country",
           "value": "TZ"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*(Mobile|Android|iPhone|iPad|iPod).*"
         }
       ],
       "dest": "https://wakora.site/$1",
